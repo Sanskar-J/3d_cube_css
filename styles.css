@@ -1,0 +1,56 @@
+
+body{
+    background: grey;
+    overflow: hidden;
+}
+.container{
+    width: 300px;
+    height: 300px;
+    border: solid white 10px;
+    margin: 300px auto;
+    perspective: 600px;
+}
+.cube{
+    
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px)
+    rotateX(30deg);
+    position: relative;
+    /* transform: rotateY(45deg); */
+    transition: transform 5s;
+}
+.cube:hover{
+    transform: translateZ(-150px) rotateX(30deg) rotateY(360deg);
+}
+.face{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+.side1{
+    background: black;
+    transform: rotateY(0deg) translateZ(150px);
+}
+.side2{
+    background: crimson;
+    transform: rotateY(90deg) translateZ(150px);
+}
+.side3{
+    background: orange;
+    transform: rotateY(180deg) translateZ(150px);
+}
+.side4{
+    background: cornflowerblue;
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.side5{
+    background: darkcyan;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.side6{
+    background: darkolivegreen;
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
